@@ -28,7 +28,7 @@ const dataLayer = [{
 const dataLayer2 = [{
     "event": "Ecommerce - View Item List Event",
     "event_name": "view_item_list",
-    "view_item": {
+    "view_item_list": {
         "currency": "",
         "items": [
             {
