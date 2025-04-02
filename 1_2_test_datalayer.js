@@ -75,5 +75,5 @@ const dataLayer2 = [{
 
 
 
-let datalayerCheck = new DataLayerCheck(dataLayer2)
+let datalayerCheck = new DataLayerCheck(dataLayer)
 datalayerCheck.process()
