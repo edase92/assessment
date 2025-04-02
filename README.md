@@ -13,5 +13,4 @@
 ##### 2_create_table.sql
 
 ### Aufgaben 2.1 a), b) & 2.2 
-##### 2_queries.sql
-###### (via BigQuery)
+##### 2_queries.sql (via BigQuery)
