@@ -1,3 +1,4 @@
+-- Base Tables
 WITH join_table AS ( 
   SELECT
     u.id AS user_id, 
@@ -36,7 +37,7 @@ WITH join_table AS (
     1, 2
 )
 
--- Aufgabe 1. a)
+-- Aufgabe 2.1. a)
 -- Variante 1 
 SELECT
   DISTINCT CONCAT(user_id, ' - ', first_name, ' ', last_name) AS full_id,
@@ -49,7 +50,7 @@ GROUP BY
 ORDER BY
   1 ASC, day_of_month ASC
 
--- Aufgabe 1. a)
+-- Aufgabe 2.1. a)
 -- Variante 2 (aggregiert)
 SELECT
   full_id, 
@@ -62,7 +63,7 @@ GROUP BY
 ORDER BY
   1
 
--- Aufgabe 1. a)
+-- Aufgabe 2.1. a)
 -- Variante 3 (Pro Nutzer und pro Tag)
 SELECT
   DISTINCT CONCAT(user_id, ' - ', first_name, ' ', last_name) AS dimension_value,
@@ -84,7 +85,7 @@ WHERE
 GROUP BY
   1
 
--- Aufgabe 1. b)
+-- Aufgabe 2.1. b)
 -- Variante 1 (Nutzer oder Tage, mit mehr als zwei page views)
 SELECT 
   DISTINCT CONCAT(user_id, ' - ', first_name, ' ', last_name) AS dimension, 
@@ -106,7 +107,7 @@ GROUP BY dimension
 HAVING 
   COUNT(event_name) >= 2
 
--- Aufgabe 1. b)
+-- Aufgabe 2.1. b)
 -- Variante 2 (Nutzer und Tage, mit mehr als zwei page views)
 SELECT
   DISTINCT CONCAT(user_id, ' - ', first_name, ' ', last_name) AS full_id,
