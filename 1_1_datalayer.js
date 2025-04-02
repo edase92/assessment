@@ -1,3 +1,4 @@
+// Annahme: Datalayer Struktur ist bekannt:
 const dataLayer = [{
     "event": "Ecommerce - View Item Event",
     "event_name": "view_item",
@@ -83,4 +84,4 @@ function checkMissingValues(dataLayer) {
     console.log(`\nFound ${missingValues.length} issues with missing values at keys: \n\t--> ${missingValues}`);
   };
 
-  checkMissingValues(dataLayer)
+checkMissingValues(dataLayer)
