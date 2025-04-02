@@ -8,9 +8,9 @@ WITH join_table AS (
     event_name, 
     date AS event_date
   FROM
-    `fourth-sphere-360919.bewerberaufgaben.user_data` u
+    `xxxx.bewerberaufgaben.user_data` u
   LEFT JOIN
-    `fourth-sphere-360919.bewerberaufgaben.event_data` e
+    `xxxx.bewerberaufgaben.event_data` e
     ON u.id = e.user_id
 ), daily_counts AS (
   SELECT
