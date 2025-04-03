@@ -33,65 +33,104 @@ function checkMissingValues(dataLayer) {
     let itemsArray = eventParams.items[0];
   
     let missingValues = [];
+
+    let missingValuesDatalayer = [];
+    let missingValuesEventParams = [];
+    let missingValuesItemsArray = [];
   
    // Check Datalayer
     for (let i in datalayer) {
       if (datalayer.hasOwnProperty(i)) {
         if (datalayer[i] === null) {
-          console.log(`null value at key ${i} in datalayer`);
+          console.log(`\n...null value at key ${i} in datalayer`);
           missingValues.push(i);
+          missingValuesDatalayer.push(i);
         } else if (datalayer[i] === undefined) {
-          console.log(`undefined value at key ${i} in datalayer`);
+          console.log(`\n...undefined value at key ${i} in datalayer`);
           missingValues.push(i);
+          missingValuesDatalayer.push(i);
         } else if (datalayer[i] === "") {
-          console.log(`empty string at key ${i} in datalayer`);
+          console.log(`\n...empty string at key ${i} in datalayer`);
           missingValues.push(i);
+          missingValuesDatalayer.push(i);
         }
-      }
+      };
+
     };
+
+    if (missingValuesDatalayer.length > 0) {
+
+        console.log(`\nFound ${missingValuesDatalayer.length} issues with missing values at keys in datalayer: \n\t--> ${missingValuesDatalayer}`);
+        console.log(true); // return true
+
+    } else if (missingValuesDatalayer.length === 0){
+        console.log(`\nFound ${missingValuesDatalayer.length} issues with missing values at keys in datalayer`);
+        console.log(false); // return false
+
+    }
   
     // Check Event Params
     for (let i in eventParams) {
       if (eventParams.hasOwnProperty(i)) {
         if (eventParams[i] === null) {
-          console.log(`null value at key ${i} in view_item`);
+          console.log(`\n...null value at key ${i} in view_item`);
           missingValues.push(i);
+          missingValuesEventParams.push(i);
         } else if (eventParams[i] === undefined) {
-          console.log(`undefined value at key ${i} in view_item`);
+          console.log(`\n...undefined value at key ${i} in view_item`);
           missingValues.push(i);
+          missingValuesEventParams.push(i);
         } else if (eventParams[i] === "") {
-          console.log(`empty string at key ${i} in view_item`);
+          console.log(`\n...empty string at key ${i} in view_item`);
           missingValues.push(i);
+          missingValuesEventParams.push(i);
         }
       }
+
     };
+
+    if (missingValuesEventParams.length > 0) {
+
+        console.log(`\nFound ${missingValuesEventParams.length} issues with missing values at keys in event params: \n\t--> ${missingValuesEventParams}`);
+        console.log(true); // return true
+
+    } else if (missingValuesEventParams.length === 0){
+        console.log(`\nFound ${missingValuesEventParams.length} issues with missing values at keys in event params`);
+        console.log(false); // return false
+
+    }
   
     // Check Items Array
     for (let i in itemsArray) {
       if (itemsArray.hasOwnProperty(i)) {
         if (itemsArray[i] === null) {
-          console.log(`null value at key ${i} in items`);
+          console.log(`\n...null value at key ${i} in items`);
           missingValues.push(i);
+          missingValuesItemsArray.push(i);
         } else if (itemsArray[i] === undefined) {
-          console.log(`undefined value at key ${i} in items`);
+          console.log(`\n...undefined value at key ${i} in items`);
           missingValues.push(i);
+          missingValuesItemsArray.push(i);
         } else if (itemsArray[i] === "") {
-          console.log(`empty string at key ${i} in items`);
+          console.log(`\n...empty string at key ${i} in items`);
           missingValues.push(i);
+          missingValuesItemsArray.push(i);
         }
       }
+      
     };
 
-    if (missingValues.length > 0) {
+    if (missingValuesItemsArray.length > 0) {
 
+        console.log(`\nFound ${missingValuesItemsArray.length} issues with missing values at keys in items array: \n\t--> ${missingValuesItemsArray}`);
         console.log(true); // return true
-        console.log(`\nFound ${missingValues.length} issues with missing values at keys: \n\t--> ${missingValues}`);
 
-    } else {
-
-        return false
+    } else if (missingValuesItemsArray.length === 0){
+        console.log(`\nFound ${missingValuesItemsArray.length} issues with missing values at keys in items array`);
+        console.log(false); // return false
 
     }
+
   };
 
 checkMissingValues(dataLayer)
