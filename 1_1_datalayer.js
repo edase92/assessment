@@ -131,6 +131,8 @@ function checkMissingValues(dataLayer) {
 
     }
 
+    console.log(`\nFound ${missingValues.length} issues with missing values in total at keys: \n\t--> ${missingValues}`)
+
   };
 
 checkMissingValues(dataLayer)
