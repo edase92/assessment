@@ -40,7 +40,7 @@ class DataLayerCheck {
 
       } else {
 
-        return false
+        return false;
 
     }
 
