@@ -33,7 +33,16 @@ class DataLayerCheck {
 
       this.checkValues();
 
-      console.log(`\nFound ${this.missingValues.length} issues with missing values at keys: \n\t--> ${this.missingValues}`);
+      if (this.missingValues.length > 0) {
+
+        console.log(true); // return true
+        console.log(`\nFound ${this.missingValues.length} issues with missing values at keys: \n\t--> ${this.missingValues}`);
+
+      } else {
+
+        return false
+
+    }
 
     };
 
