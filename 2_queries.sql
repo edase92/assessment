@@ -127,7 +127,7 @@ SELECT
   user_group, 
   ARRAY_AGG(event_date IGNORE NULLS ORDER BY event_date ASC) AS event_date, 
   ARRAY_AGG(page_views ORDER BY event_date ASC) AS page_views, 
-  SUM(page_views) AS total_page_views
+  -- SUM(page_views) AS total_page_views
 FROM
   daily_counts_user_groups
 WHERE
