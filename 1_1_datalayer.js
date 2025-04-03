@@ -1,4 +1,5 @@
-// Annahme: Datalayer Struktur ist bekannt:
+// Annahme: Datalayer Struktur ist bekannt
+
 const dataLayer = [{
     "event": "Ecommerce - View Item Event",
     "event_name": "view_item",
@@ -80,8 +81,17 @@ function checkMissingValues(dataLayer) {
         }
       }
     };
-  
-    console.log(`\nFound ${missingValues.length} issues with missing values at keys: \n\t--> ${missingValues}`);
+
+    if (missingValues.length > 0) {
+
+        console.log(true); // return true
+        console.log(`\nFound ${missingValues.length} issues with missing values at keys: \n\t--> ${missingValues}`);
+
+    } else {
+
+        return false
+
+    }
   };
 
 checkMissingValues(dataLayer)
