@@ -38,13 +38,13 @@ function checkMissingValues(dataLayer) {
     for (let i in datalayer) {
       if (datalayer.hasOwnProperty(i)) {
         if (datalayer[i] === null) {
-          console.log(`null value at key ${i}`);
+          console.log(`null value at key ${i} in datalayer`);
           missingValues.push(i);
         } else if (datalayer[i] === undefined) {
-          console.log(`undefined value at key ${i}`);
+          console.log(`undefined value at key ${i} in datalayer`);
           missingValues.push(i);
         } else if (datalayer[i] === "") {
-          console.log(`empty string at key ${i}`);
+          console.log(`empty string at key ${i} in datalayer`);
           missingValues.push(i);
         }
       }
@@ -54,13 +54,13 @@ function checkMissingValues(dataLayer) {
     for (let i in eventParams) {
       if (eventParams.hasOwnProperty(i)) {
         if (eventParams[i] === null) {
-          console.log(`null value at key ${i}`);
+          console.log(`null value at key ${i} in view_item`);
           missingValues.push(i);
         } else if (eventParams[i] === undefined) {
-          console.log(`undefined value at key ${i}`);
+          console.log(`undefined value at key ${i} in view_item`);
           missingValues.push(i);
         } else if (eventParams[i] === "") {
-          console.log(`empty string at key ${i}`);
+          console.log(`empty string at key ${i} in view_item`);
           missingValues.push(i);
         }
       }
@@ -70,13 +70,13 @@ function checkMissingValues(dataLayer) {
     for (let i in itemsArray) {
       if (itemsArray.hasOwnProperty(i)) {
         if (itemsArray[i] === null) {
-          console.log(`null value at key ${i}`);
+          console.log(`null value at key ${i} in items`);
           missingValues.push(i);
         } else if (itemsArray[i] === undefined) {
-          console.log(`undefined value at key ${i}`);
+          console.log(`undefined value at key ${i} in items`);
           missingValues.push(i);
         } else if (itemsArray[i] === "") {
-          console.log(`empty string at key ${i}`);
+          console.log(`empty string at key ${i} in items`);
           missingValues.push(i);
         }
       }
