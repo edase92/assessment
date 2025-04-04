@@ -70,7 +70,7 @@ function checkMissingValues(dataLayer) {
     };
   };
 
-  keysInObject(missingValuesDatalayer, 'datalayer')
+  keysInObject(missingValuesDatalayer, 'datalayer');
 
 
   // Check Event Params
@@ -92,7 +92,7 @@ function checkMissingValues(dataLayer) {
     }
 
   };
-  keysInObject(missingValuesEventParams, 'view_item')
+  keysInObject(missingValuesEventParams, 'view_item');
 
   // Check Items Array
   for (let i in itemsArray) {
